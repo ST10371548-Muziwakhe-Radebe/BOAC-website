@@ -1,3 +1,44 @@
+// ============================================================
+// CODE ATTRIBUTION — HARVARD REFERENCING METHOD
+// ============================================================
+//
+// Reference 1
+// Author:        Mozilla Developer Network (MDN)
+// Year:          2024
+// Title:         Intersection Observer API
+// Link:          https://developer.mozilla.org/en-US/docs/Web/API/Intersection_Observer_API
+// Date Accessed: 16 August 2026
+//
+// Reference 2
+// Author:        Mozilla Developer Network (MDN)
+// Year:          2024
+// Title:         Window: requestAnimationFrame() Method
+// Link:          https://developer.mozilla.org/en-US/docs/Web/API/Window/requestAnimationFrame
+// Date Accessed: 16 August 2026
+//
+// Reference 3
+// Author:        Mozilla Developer Network (MDN)
+// Year:          2024
+// Title:         Clipboard API — navigator.clipboard.writeText()
+// Link:          https://developer.mozilla.org/en-US/docs/Web/API/Clipboard/writeText
+// Date Accessed: 16 August 2026
+//
+// Reference 4
+// Author:        Mozilla Developer Network (MDN)
+// Year:          2024
+// Title:         Element: classList Property
+// Link:          https://developer.mozilla.org/en-US/docs/Web/API/Element/classList
+// Date Accessed: 16 August 2026
+//
+// Reference 5
+// Author:        Mozilla Developer Network (MDN)
+// Year:          2024
+// Title:         EventTarget: addEventListener() Method
+// Link:          https://developer.mozilla.org/en-US/docs/Web/API/EventTarget/addEventListener
+// Date Accessed: 16 August 2026
+//
+// ============================================================
+
 'use strict';
 
 // ── Navbar scroll ─────────────────────────────────────
