@@ -1,0 +1,9 @@
+import {useEffect,useMemo,useState} from 'react'
+import {Footer,Link,Navbar} from './components.jsx'
+import {About,Home} from './pages/HomeAbout.jsx'
+import {Media,Programmes,Youth} from './pages/ProgrammesMedia.jsx'
+import {Contact,Donate,GetInvolved,Volunteer} from './pages/Engage.jsx'
+import {Gallery} from './pages/Gallery.jsx'
+const routes={'/':Home,'/index.html':Home,'/about':About,'/about.html':About,'/programmes':Programmes,'/programmes.html':Programmes,'/youth':Youth,'/youth.html':Youth,'/media':Media,'/media.html':Media,'/gallery':Gallery,'/gallery.html':Gallery,'/get-involved':GetInvolved,'/get-involved.html':GetInvolved,'/volunteer':Volunteer,'/volunteer.html':Volunteer,'/donate':Donate,'/donate.html':Donate,'/contact':Contact,'/contact.html':Contact}
+function NotFound(){return <section className="section not-found"><div className="container"><span className="label">404</span><h1>Page not found</h1><p>The page you requested does not exist.</p><Link to="/" className="btn btn-teal">Return home</Link></div></section>}
+export default function App(){const[path,setPath]=useState(location.pathname.replace(/\/$/,'')||'/');useEffect(()=>{const fn=()=>setPath(location.pathname.replace(/\/$/,'')||'/');addEventListener('popstate',fn);return()=>removeEventListener('popstate',fn)},[]);const Page=useMemo(()=>routes[path]||NotFound,[path]);useEffect(()=>{const name={'/':'Home','/about':'About BOAC','/programmes':'Programmes','/youth':'Youth Development','/media':'Media','/gallery':'Gallery','/get-involved':'Get Involved','/volunteer':'Volunteer','/donate':'Donate','/contact':'Contact'}[path]||'BOAC';document.title=`${name} — Bokwidi Old Age Centre`},[path]);return <><a className="skip-link" href="#main-content">Skip to main content</a><Navbar path={path}/><main id="main-content" tabIndex="-1"><Page/></main><Footer/></>}
